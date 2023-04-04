@@ -1,0 +1,16 @@
+def get_max(num_arr):
+    max = num_arr[0]
+    for el in num_arr:
+        if (el > max): 
+            max = el
+    return max
+    
+def get_min(num_arr):
+    min = num_arr[0]
+    for el in num_arr:
+        if (el < min):
+            min = el
+    return min        
+
+print(get_max([8,6,2,1,9,63,-784,535]), get_min([8,6,2,1,9,63,-784,535]))
+
