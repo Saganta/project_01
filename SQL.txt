@@ -1,0 +1,18 @@
+CREATE TABLE Students ( 
+  Id INTEGER PRIMARY KEY AUTOINCREMENT,	
+  Student_Id INTEGER, 
+  Student_Name TEXT, 
+  School_Id INTEGER 
+);
+INSERT INTO Students VALUES(student_id, student_name, school_id)
+VALUES((201,'Иван',1),(202,'Петр',2),(203,'Анастасия',3),(204,'Игорь',4))
+
+INSERT INTO School (School_Id, School_Name, Place_Count)
+VALUES
+('1','Протон',200),
+('2','Перспектива',300),
+('3','Спектр',400),
+('4','Содружество',500);
+
+SELECT Students.Student_Id, Students.Student_Name, School.School_Id, School.School_Name 
+FROM Students JOIN School ON School.School_Id = Students.School_Id WHERE Students.student_id = 202;
